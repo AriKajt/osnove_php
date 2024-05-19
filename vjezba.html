@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <form action="#" method="post">
+            <tr>
+                <td><label for="first_name">Ime:</label></td>
+                <td><input type="text" name="first_name" id="first_name"></td>
+            </tr>
+            <tr>
+                <td><label for="last_name">Prezime:</label></td>
+                <td><input type="text" name="last_name" id="last_name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="country">Država:</label></td>
+                <td>
+                    <select name="country" id="country">
+                        <option value="1">Hrvatska</option>
+                        <option value="2">BiH</option>
+                        <option value="3">Slovenija</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Spol:</label></td>
+                <td>
+                    <input type="radio" name="gender" id="gender">Ženski
+                    <input type="radio" name="gender" id="gender">Muški
+                    <input type="radio" name="gender" id="gender">Nebinarni/ostalo
+                </td>
+            </tr>
+            <tr>
+                <td><label for="interest">Zanima me:</label></td>
+                <td>
+                    <input type="radio" name="interest" id="interest">Plivanje
+                    <input type="radio" name="interest" id="interest">Programiranje
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Pošalji!</button></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
