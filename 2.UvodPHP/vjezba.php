@@ -2,7 +2,7 @@
 $cijeli = -89;
 $realni = -3.6;
 $tekst = 'ovo je string';
-$logika = true;
+$logika = false;
 
 echo 'Cijeli broj je ' . $cijeli . ', realni je ' . $realni . ', tekst je: "' . $tekst . '", a logicka vrijednost je ' . $logika . '.';
 
@@ -20,3 +20,18 @@ echo 'Vrijednost varijable b je ' . $b . '.';
 
 $a = 9153;
 echo ' Sada je vrijednost varijable b ' . $b . '.';
+
+echo '<br>';
+var_dump($cijeli);
+
+echo '<br>';
+var_dump($realni);
+
+echo '<br>';
+var_dump($tekst);
+
+echo '<br>';
+var_dump($logika);
+
+echo '<br>';
+echo $logika ? 'DA' : 'NE';
