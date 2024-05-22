@@ -28,3 +28,17 @@ var_dump( ($a > $b) || ($b == $a) || ($b <= $a) ); //true (prvi je true, drugi j
 // != !==
 // &&
 // ||
+
+// vrijednosti koje vracaju FALSE
+$var = false;
+$var = 0;
+$var = 0.0;
+$var = '0';
+$var = '';
+$var = []; //empty array
+$var = NULL;
+
+//primjer jednostavnog if statementa
+if (!null) {
+    echo 'Izraz je istinit.';
+}
