@@ -10,15 +10,18 @@ while ($i <= 10) {
 
 echo '<br>';
 
-for ($j=1; $j<=50; $j++) {
-    echo ($j*2).' ';
+// visekratnici od 3 (umjesto parni brojevi):
+
+for ($j=1; $j<=33; $j++) {
+    echo ($j*3).' ';
 }
 
 echo '<br>';
 
-// druga varijanta
+// drugi nacin:
+
 for ($j=1; $j<=100; $j++) {
-    if ($j%2==0) {
+    if ($j%3==0) {
         echo $j.' ';
     }
 }

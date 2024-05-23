@@ -1,6 +1,6 @@
 <?php
 
-// United Federatio of Planets user database
+// United Federation of Planets user database
 
 $users = [
     [
