@@ -124,6 +124,11 @@ foreach ($users as $key => $user) {
     //     echo "$key2 => $value";
     // }
     echo '<br>';
+    unset($users[--$key]['age']);
 }
+
+echo '<pre>';
+print_r($users);
+echo '</pre>';
 
 //sljedeci put iskombinirati s html-om da ispisuje to sve u tablici, vidi foreach_in_html.php

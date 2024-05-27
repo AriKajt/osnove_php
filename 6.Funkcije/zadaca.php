@@ -1,0 +1,63 @@
+<?php
+
+// PHP funkcije – vježba 1
+//  Proizvoljno deklarirajte funkciju koja vraća neki tekst.
+//  Pozovite funkciju i vraćenu vrijednost dodijelite varijabli.
+//  Ispišite vrijednost varijable.
+
+function returnText() : string 
+{
+    return "Ovo je vraceni tekst";
+}
+
+$text = returnText();
+var_dump($text);
+
+echo '<br>';
+
+// PHP funkcije – vježba 2
+//  Proizvoljno deklarirajte funkciju koja ima dva argumenta (name i surname). Funkcija
+// treba konkatenirati podatke iz argumenata tako da između postoji razmak i dodijeliti ih
+// lokalnoj varijabli, zatim treba vrijednost u varijabli pretvoriti u velika slova i to vratiti kao
+// rezultat.
+//  Pozovite funkciju i vraćenu vrijednost dodijelite varijabli.
+//  Ispišite vrijednost varijable.
+
+function allCapsNameAndSurname(string $name, string $surname) : string {
+    $fullName = "$name $surname";
+    return strtoupper($fullName);
+}
+
+$ime = allCapsNameAndSurname('Jean Luc', "Picard");
+echo $ime;
+
+echo '<br>';
+
+// PHP funkcije – vježba 3
+//  Proizvoljno deklarirajte funkciju koja ima jedan argument (number). Funkcija treba imati
+// lokalnu varijablu u koju će pribrojiti vrijednost argumenta number te istu vratiti kao
+// rezultat. Vrijednost treba biti zadržana kod svakog poziva funkcije.
+//  Deklarirajte funkciju kao varijablu.
+//  Pozovite funkciju pomoću varijable, a kao vrijednost argumenta pošaljite slučajan broj u
+// rasponu od 1 do 10 te ispišite rezultat.
+//  Ponovite postupak pet puta.
+
+function pribroji(int $number) : int 
+{
+    static $a = 0; // radi isto i kad se ostavi $a bez setiranja na 0, valjda pretvori null u 0?
+    $a += $number;
+    return $a;
+}
+$fn = 'pribroji';
+for ($i=0; $i < 6; $i++) { 
+    $random = rand(1,10);
+    if (!$i) {
+        $sumA = $fn($random);
+        echo "Nasumicni broj $random zbrojen s vrijednosti 0 daje $sumA. <br>";
+        continue;
+    }
+    echo "Nasumicni broj $random zbrojen s prethodnim rezultatom $sumA daje ";
+    $sumA = $fn($random);
+    echo "$sumA. <br>";
+}
+
