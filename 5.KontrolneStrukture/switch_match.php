@@ -59,6 +59,6 @@ $dan = match ($variable) {
      default => 'Ne znam koji je dan'
 };
 echo $dan;
-//cesto se koristi za umjesto 'Ponedjeljak' i sl, da je tu neka funkcija, objet, path do nekog file-a i sl. 
+//cesto se koristi za umjesto 'Ponedjeljak' i sl, da je tu neka funkcija, objekt, path do nekog file-a i sl. 
 
 echo '<br><br>';

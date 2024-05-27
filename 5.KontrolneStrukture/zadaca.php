@@ -101,7 +101,7 @@ echo '<br><br>';
 date_default_timezone_set('Europe/Zagreb');
 
 //date('D') returns one of MonTueWedThuFriSatSun
-//date('N') returns days of the week as int 1-7
+//date('N') returns days of the week as string 1-7
 //date('l') returns days as Monday, Tuesday, ...
 
 
