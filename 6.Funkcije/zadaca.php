@@ -25,10 +25,10 @@ echo '<br>';
 
 function allCapsNameAndSurname(string $name, string $surname) : string {
     $fullName = "$name $surname";
-    return strtoupper($fullName);
+    return mb_strtoupper($fullName);
 }
 
-$ime = allCapsNameAndSurname('Jean Luc', "Picard");
+$ime = allCapsNameAndSurname('žan luk', "pikard");
 echo $ime;
 
 echo '<br>';
