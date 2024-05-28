@@ -51,13 +51,13 @@ function pribroji(int $number) : int
 $fn = 'pribroji';
 for ($i=0; $i < 6; $i++) { 
     $random = rand(1,10);
-    if (!$i) {
+    if ($i==0) {
         $sumA = $fn($random);
-        echo "Nasumicni broj $random zbrojen s vrijednosti 0 daje $sumA. <br>";
+        echo "Nasumicni broj $random zbrojen s vrijednosti 0 daje $sumA. <br>";//write out first sum
         continue;
     }
-    echo "Nasumicni broj $random zbrojen s prethodnim rezultatom $sumA daje ";
-    $sumA = $fn($random);
-    echo "$sumA. <br>";
+    echo "Nasumicni broj $random zbrojen s prethodnim rezultatom $sumA daje ";//write out other sums, first mentioning the previous sumA
+    $sumA = $fn($random);//then change sumA to the new value
+    echo "$sumA. <br>";//then state what the new sumA is
 }
 
