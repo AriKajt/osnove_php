@@ -27,24 +27,25 @@ function countVowels(string $text): int
     $cnt += substr_count($text, 'i');
     $cnt += substr_count($text, 'o');
     $cnt += substr_count($text, 'u');
-    $cnt += substr_count($text, 'A');
-    $cnt += substr_count($text, 'E');
-    $cnt += substr_count($text, 'I');
-    $cnt += substr_count($text, 'O');
-    $cnt += substr_count($text, 'U');
+    // $cnt += substr_count($text, 'A');
+    // $cnt += substr_count($text, 'E');
+    // $cnt += substr_count($text, 'I');
+    // $cnt += substr_count($text, 'O');
+    // $cnt += substr_count($text, 'U');
     return $cnt;
 }
 
 
 if (!empty($postData["word"])) {
     //makni whitespace na pocetku/kraju rijeci
-    $word = trim($postData["word"]);
+    $word = trim(strtolower($postData["word"]));
 
     if (!preg_match('/^[\p{Latin}]+$/u', $word)) {
     //provjeri jesu samo slova unesena, ako ne, spremi gresku
         $errors['word'] = "Niste upisali ispravnu riječ.";
     } else {
         $length = mb_strlen($word); //mb = prilagodjeno za nasa slova, inace ih racuna duplo
+
         $samoglasnici = countVowels($word);
         $suglasnici = $length - $samoglasnici;
         $words[] = [
