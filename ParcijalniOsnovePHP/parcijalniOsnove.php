@@ -27,18 +27,13 @@ function countVowels(string $text): int
     $cnt += substr_count($text, 'i');
     $cnt += substr_count($text, 'o');
     $cnt += substr_count($text, 'u');
-    // $cnt += substr_count($text, 'A');
-    // $cnt += substr_count($text, 'E');
-    // $cnt += substr_count($text, 'I');
-    // $cnt += substr_count($text, 'O');
-    // $cnt += substr_count($text, 'U');
     return $cnt;
 }
 
 
 if (!empty($postData["word"])) {
     //makni whitespace na pocetku/kraju rijeci
-    $word = trim(strtolower($postData["word"]));
+    $word = trim(mb_strtolower($postData["word"]));
 
     if (!preg_match('/^[\p{Latin}]+$/u', $word)) {
     //provjeri jesu samo slova unesena, ako ne, spremi gresku
